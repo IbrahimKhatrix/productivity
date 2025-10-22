@@ -34,7 +34,7 @@ function connectSelf() {
   selfClient.on('open', () => {
     console.log('Self-client connected to keep alive');
     // Send a heartbeat every 2 minutes
-    setInterval(() => selfClient.send('heartbeat'), 2 * 60 * 1000);
+    setInterval(() => selfClient.send('heartbeat'), 20 * 1000);
   });
 
   selfClient.on('message', (msg) => console.log(`Self-client received: ${msg}`));
