@@ -24,7 +24,7 @@ setInterval(() => {
     if (client.readyState === client.OPEN) client.send(`Time: ${now}`);
   });
   console.log(`Broadcasted time: ${now}`);
-}, 2 * 60 * 1000);
+}, 20 * 1000);
 
 // ---- Self-connect hack to keep server alive ----
 let selfClient;
